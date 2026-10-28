@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Drug Safety Alerts</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="brand">
+        <span class="brand-icon">💊</span>
+        <h1 data-i18n="title"></h1>
+      </div>
+      <nav class="lang" aria-label="Language">
+        <button id="btn-en" class="active">English</button>
+        <button id="btn-hi">हिन्दी</button>
+        <button id="btn-bn">বাংলা</button>
+        <button id="btn-mr">मराठी</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="card order-1">
+      <div class="card-head"><span class="icon">📄</span><h2 data-i18n="upload"></h2></div>
+      <input type="file" id="upload" accept="image/*">
+      <img id="preview" alt="">
+    </section>
+
+    <section class="card order-2">
+      <div class="card-head"><span class="icon">🔍</span><h2 data-i18n="checkTitle"></h2></div>
+      <div class="input-wrap"><span>💊</span><input type="text" id="drugsInput" placeholder="warfarin, ibuprofen"></div>
+      <div class="input-wrap"><span>🥗</span><input type="text" id="foodsInput" placeholder="leafy greens"></div>
+      <button id="checkBtn" class="primary" data-i18n="checkBtn"></button>
+      <div id="apiStatus" class="status"></div>
+    </section>
+
+    <section class="card order-4">
+      <div class="card-head"><span class="icon">✅</span><h2 data-i18n="confirmTitle"></h2></div>
+      <div id="confirm"></div>
+    </section>
+
+    <div id="banner"></div>
+
+    <section class="card order-6">
+      <div class="card-head"><span class="icon">🧑‍⚕️</span><h2 data-i18n="patientTitle"></h2></div>
+      <div id="patient"></div>
+    </section>
+
+    <section class="card order-7">
+      <div class="card-head"><span class="icon">📋</span><h2 data-i18n="doctorTitle"></h2></div>
+      <div class="table-wrap"><div id="doctor"></div></div>
+    </section>
+
+  </main>
+
+  <footer class="footer" data-i18n="disclaimer"></footer>
+
+  <script src="app.js"></script>
+  <script>
+    // Highlights the selected language button
+    document.querySelectorAll(".lang button").forEach(b => {
+      b.addEventListener("click", () => {
+        document.querySelectorAll(".lang button").forEach(x => x.classList.remove("active"));
+        b.classList.add("active");
+      });
+    });
+  </script>
+</body>
+</html>
