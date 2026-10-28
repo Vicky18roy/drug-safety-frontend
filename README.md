@@ -2,6 +2,13 @@
 
 A multilingual web app that shows drug and food interaction warnings from a prescription, for patients and for doctors.
 Built for a 24-hour hackathon in a team of 3. I built the frontend (Member 3).
+## Screenshots
+![English](english.png)
+![Hindi](hindi.png)
+![Bengali](bengali.png)
+![Marathi](marathi.png)
+![Doctor view](doctor.png)
+
 
 ## Features
 - Patient alerts in English, Hindi, Bengali and Marathi, with voice
